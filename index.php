@@ -69,7 +69,7 @@ include_once("models/post.php");
     </div>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="emailVerifiedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="postAddedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <img src="images/blog-icon.png" class="rounded me-2" alt="logo" style="height: 20px">
                 <strong class="me-auto">X7 Blog App</strong>
@@ -132,8 +132,8 @@ include_once("models/post.php");
 <?php
 if (isset($_GET['status'])) {
     echo ('<script>');
-    echo ('$(document).ready(function() {var emailVerifiedToast = document.getElementById("emailVerifiedToast");');
-    echo ('if (emailVerifiedToast) {var toastBootstrap=bootstrap.Toast.getOrCreateInstance(emailVerifiedToast);toastBootstrap.show();}});');
+    echo ('$(document).ready(function() {var postAddedToast = document.getElementById("postAddedToast");');
+    echo ('if (postAddedToast) {var toastBootstrap=bootstrap.Toast.getOrCreateInstance(postAddedToast);toastBootstrap.show();}});');
     echo ('</script>');
 }
 if (isset($_GET['post'])) {
