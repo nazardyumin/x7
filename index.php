@@ -36,7 +36,7 @@ include_once("models/post.php");
 
         <div class="row mt-3">
             <h3 class="text-center mt-3">Мои посты</h3>
-            <div class="overflow-auto" style="height: 50vh;">
+            <div class="overflow-auto" style="height: 45vh;">
                 <table class="table table-success table-striped">
                     <thead class="sticky-top">
                         <td>ID</td>
@@ -88,8 +88,7 @@ include_once("models/post.php");
         $ps = $pdo->prepare("select * from posts where id=:id");
         $ps->execute(array("id" => $id));
         $row = $ps->fetch();
-        $post = new Post();
-        $post->fromArray($row);
+        $post = new Post($row);
         $ps = null;
         $pdo = null;
     }

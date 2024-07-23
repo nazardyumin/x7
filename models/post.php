@@ -6,11 +6,7 @@ class Post
     public $content;
     public $created_at;
 
-    function __construct()
-    {
-    }
-
-    function fromArray($array)
+    function __construct($array)
     {
         $this->id = $array['id'];
         $this->title = $array['title'];
