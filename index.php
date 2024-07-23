@@ -37,7 +37,7 @@ include_once("models/post.php");
         <div class="row mt-3">
             <h3 class="text-center mt-3">Мои посты</h3>
             <div class="overflow-auto" style="height: 45vh;">
-                <table class="table table-success table-striped">
+                <table class="table table-dark table-striped">
                     <thead class="sticky-top">
                         <td>ID</td>
                         <td>Заголовок</td>
@@ -98,11 +98,11 @@ include_once("models/post.php");
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="postModalLabel"><?php echo($post->title.' от '.$post->created_at);?></h5>
+                    <h5 class="modal-title" id="postModalLabel"><?php echo ($post->title . ' от ' . $post->created_at); ?></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><?php echo($post->content);?></p>
+                    <p><?php echo ($post->content); ?></p>
                 </div>
             </div>
         </div>
